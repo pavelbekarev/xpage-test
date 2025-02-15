@@ -1,0 +1,23 @@
+:root {
+  --baseFontSize: 8px; /* 1rem */
+  --baseFontFamily: sans-serif;
+  --baseLineHeight: 1.2;
+  --baseFontWeight: normal;
+  --baseBorderRadius: 1rem;
+}
+
+html {
+  font: var(--baseFontWeight) var(--baseFontSize) / var(--baseLineHeight)
+    var(--baseFontFamily);
+}
+
+body {
+  margin: 0rem;
+  padding: 0 2.5rem;
+  background-color: #ececec;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}

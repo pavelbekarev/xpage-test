@@ -1,0 +1,112 @@
+.playSection {
+  margin-bottom: 20rem;
+
+  &__headContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+      font-size: 8rem;
+      text-transform: uppercase;
+      font-family: "DrukWideCyr-Bold";
+    }
+
+    &__button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-family: "DrukWideCyr-Bold";
+      color: #f36722;
+      gap: 1.5rem;
+      cursor: pointer;
+    }
+  }
+
+  &__cardPlace {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+
+    &__card {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      background-color: #fff;
+      border-radius: 2.5rem;
+      z-index: 100;
+      overflow: hidden;
+      transition: all 0.3s ease-out;
+      padding-bottom: 2.5rem;
+
+      &:nth-child(2) &__img {
+        position: relative;
+        width: 80%;
+        right: -30%;
+        top: -4%;
+        border-radius: 0rem;
+      }
+
+      &__img {
+        padding: 0;
+        width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: 2.5rem 2.5rem 400rem 400rem;
+      }
+
+      &__title {
+        margin: 0 2.5rem;
+        margin-top: 7.75rem;
+        text-transform: uppercase;
+        font-size: 3.25rem;
+        font-family: "DrukWideCyr-Bold";
+        transition: all 0.3s ease-out;
+      }
+
+      &__description {
+        margin: 0 2.5rem;
+        font-size: 1.75rem;
+        font-family: "Commissioner-Regular";
+        font-weight: 500;
+        transition: all 0.3s ease-out;
+      }
+
+      &__button {
+        position: relative;
+        width: 100%;
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f36722;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-family: "DrukWideCyr-Bold";
+      }
+
+      &:hover {
+        background-color: #202020;
+        transition: all 0.3s ease-out;
+      }
+
+      &:hover &__title,
+      &:hover &__description {
+        color: #fff;
+        transition: all 0.3s ease-out;
+      }
+
+      &:hover &__button {
+        display: flex;
+        font-weight: 100;
+        color: #fff;
+      }
+    }
+  }
+}

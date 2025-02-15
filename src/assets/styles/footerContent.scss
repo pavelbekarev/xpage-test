@@ -1,0 +1,117 @@
+.footerContent {
+  position: relative;
+  display: flex;
+  border-top: 1px solid black;
+  height: 100%;
+
+  &__leftSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title {
+      font-size: 5rem;
+      width: 80%;
+      text-transform: uppercase;
+      font-family: "DrukWideCyr-Bold";
+    }
+
+    &__apps {
+      display: flex;
+      gap: 5rem;
+
+      &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+
+        &__img {
+          width: 20%;
+          aspect-ratio: 1 / 1;
+        }
+
+        &__textContent {
+          display: flex;
+          flex-direction: column;
+          width: 10rem;
+
+          &__text {
+            line-height: 1.5rem;
+            margin: 0;
+            font-size: 1.2rem;
+            font-family: "Commissioner-Regular";
+          }
+
+          &__text:last-child {
+            font-weight: 900;
+          }
+        }
+      }
+    }
+
+    &__madeInText {
+      margin-top: 25rem;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-family: "DrukWideCyr-Bold";
+    }
+  }
+
+  &__rightSide {
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+
+    &__img {
+      position: absolute;
+      bottom: 0%;
+      right: -1.35%;
+      z-index: -100;
+      width: 36%;
+    }
+
+    &__qrCode {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      border-radius: 3.75rem;
+      margin-right: 26rem;
+      z-index: 100;
+      width: 36rem;
+      height: 40rem;
+      background-color: #fff;
+
+      &__img {
+        width: 18rem;
+        aspect-ratio: 1 / 1;
+      }
+
+      &__textContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        &__phoneType {
+          margin-bottom: 0;
+          font-size: 1.75rem;
+          color: #747474;
+        }
+
+        &__instruction {
+          margin-top: 0;
+          font-size: 1.4rem;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          text-align: center;
+          font-family: "DrukWideCyr-Bold";
+        }
+      }
+    }
+  }
+}
