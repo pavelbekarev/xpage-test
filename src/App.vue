@@ -3,8 +3,6 @@ import "./assets/styles/main.scss";
 import HeaderMenu from "../src/components/HeaderMenu/HeaderMenu.vue";
 import ArrowRightIcon from "./components/ArrowRightIcon/ArrowRightIcon.vue";
 import LearnSectionFilter from "./components/LearnSectionFilter/LearnSectionFilter.vue";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
 import { computed, onMounted, onUnmounted, ref } from "vue";
 import mainBanner from "./assets/img/mainBanner.webp";
 import image1 from "./assets/img/1.webp";
