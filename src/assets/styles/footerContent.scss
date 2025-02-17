@@ -205,3 +205,15 @@
     }
   }
 }
+
+@media (max-width: 400px) {
+  .footerContent {
+    --footerContentTitleFontSize: 3.25rem;
+
+    &__rightSide {
+      &__img {
+        right: calc(0% - 1rem);
+      }
+    }
+  }
+}
