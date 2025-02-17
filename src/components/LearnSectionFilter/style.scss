@@ -5,9 +5,22 @@
   width: auto;
   font-size: 1.25rem;
   margin: 0 2.5rem;
+  padding: 0 10px;
   height: 33px;
   border-radius: 4.83rem;
   color: #2e8d43;
   text-transform: uppercase;
   font-family: "DrukWideCyr-Bold";
+}
+
+@media (max-width: 1040px) {
+  .learnSectionFilter {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 665px) {
+  .learnSectionFilter {
+    justify-content: left;
+  }
 }

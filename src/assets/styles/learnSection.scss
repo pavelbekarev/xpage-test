@@ -1,4 +1,5 @@
 .learnSection {
+  --learnSectionSubTitleFontSize: 5rem;
   margin-bottom: 15rem;
   background-color: #fff;
   padding: 0 2.5rem;
@@ -68,7 +69,7 @@
           font-weight: 100;
           text-transform: uppercase;
           width: 70%;
-          font-size: 5rem;
+          font-size: var(--learnSectionSubTitleFontSize);
           padding: 0 2.5rem;
         }
 
@@ -91,20 +92,20 @@
           flex-wrap: wrap;
           gap: 0.5rem;
           width: 50%;
-        }
 
-        &__filter {
-          margin: 0 !important;
-          color: #fff !important;
+          &__filter {
+            margin: 0 !important;
+            color: #fff !important;
 
-          &:hover {
-            cursor: pointer;
-            background-color: rgba(255, 255, 255, 0.3);
+            &:hover {
+              cursor: pointer;
+              background-color: rgba(255, 255, 255, 0.3);
+            }
           }
         }
 
         &__title {
-          font-size: 5rem;
+          font-size: var(--learnSectionSubTitleFontSize);
           width: 70%;
           font-family: "DrukWideCyr-Bold";
           color: #fff;
@@ -250,6 +251,213 @@
             height: 20px !important;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1160px) {
+  .learnSection {
+    &__content {
+      &__leftSide {
+        width: 100%;
+      }
+
+      &__rightSide {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1040px) {
+  .learnSection {
+    &__content {
+      &__leftSide {
+        &__banner {
+          &__sectionsCount {
+            width: 25% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1010px) {
+  .learnSection {
+    &__content {
+      &__leftSide {
+        &__banner {
+          &__sectionsCount {
+            width: 30% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .learnSection {
+    &__content {
+      &__leftSide {
+        width: 100%;
+
+        &__banner {
+          background-size: cover;
+          background-position: 30%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 855px) {
+  .learnSection {
+    &__content {
+      &__leftSide {
+        &__banner {
+          &__sectionsCount {
+            width: 40% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .learnSection {
+    &__content {
+      &__leftSide {
+        width: 100%;
+
+        &__banner {
+          &__title {
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .learnSection {
+    --learnSectionSubTitleFontSize: 4rem;
+  }
+}
+
+@media (max-width: 670px) {
+  .learnSection {
+    &__headContent {
+      &__button {
+        svg {
+          display: none;
+        }
+      }
+
+      &__title {
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 665px) {
+  .learnSection {
+    &__content {
+      &__leftSide {
+        &__banner {
+          &__sectionsCount {
+            width: auto !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .learnSection {
+    &__content {
+      &__leftSide {
+        &__banner {
+          &__title {
+            width: 85%;
+          }
+        }
+
+        &__filters {
+          &__filtersList {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .learnSection {
+    &__content {
+      &__leftSide {
+        &__banner {
+          background-position: 45%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .learnSection {
+    --learnSectionSubTitleFontSize: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .learnSection {
+    &__content {
+      &__leftSide {
+        &__banner {
+          &__title {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .learnSection {
+    &__headContent {
+      &__title {
+        font-size: 4rem;
+      }
+
+      &__button {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .learnSection {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 350px) {
+  .learnSection {
+    padding: 0;
+
+    &__headContent {
+      &__title {
+        font-size: 3.5rem;
       }
     }
   }

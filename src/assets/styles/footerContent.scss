@@ -1,4 +1,6 @@
 .footerContent {
+  --footerContentTitleFontSize: 5rem;
+  --footerContentImage: url("@/assets/img/ballForFooter.svg");
   position: relative;
   display: flex;
   border-top: 1px solid black;
@@ -10,7 +12,7 @@
     justify-content: space-between;
 
     &__title {
-      font-size: 5rem;
+      font-size: var(--footerContentTitleFontSize);
       width: 80%;
       text-transform: uppercase;
       font-family: "DrukWideCyr-Bold";
@@ -64,8 +66,9 @@
     margin-top: 7rem;
 
     &__img {
+      content: var(--footerContentImage);
       position: absolute;
-      bottom: 0%;
+      bottom: -10%;
       right: -1.35%;
       z-index: -100;
       width: 36%;
@@ -111,6 +114,93 @@
           text-align: center;
           font-family: "DrukWideCyr-Bold";
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1160px) {
+  .footerContent {
+    &__rightSide {
+      &__qrCode {
+        margin-right: 5rem;
+      }
+
+      &__img {
+        right: -1.8%;
+      }
+    }
+  }
+}
+
+@media (max-width: 975px) {
+  .footerContent {
+    --footerContentTitleFontSize: 4rem;
+
+    &__rightSide {
+      &__img {
+        right: -2.5%;
+      }
+    }
+  }
+}
+
+@media (max-width: 855px) {
+  .footerContent {
+    --footerContentImage: url("@/assets/img/basketImageForFooter.svg");
+
+    &__rightSide {
+      &__img {
+        width: 40%;
+      }
+
+      &__qrCode {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .footerContent {
+    --footerContentImage: url("@/assets/img/basketImageForFooter.svg");
+
+    &__leftSide {
+      &__apps {
+        flex-direction: column;
+
+        &__item {
+          &__img {
+            width: 6%;
+          }
+
+          &__textContent {
+            width: 100%;
+
+            &__text {
+              font-size: 1.5rem;
+              line-height: 2rem;
+            }
+          }
+        }
+      }
+    }
+
+    &__rightSide {
+      &__img {
+        bottom: 8%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .footerContent {
+    --footerContentTitleFontSize: 3.25rem;
+
+    &__leftSide {
+      &__title {
+        width: 100%;
       }
     }
   }

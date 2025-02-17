@@ -1,4 +1,9 @@
 .playSection {
+  --playSectionCardImgWidth: 100%;
+  --playSectionCard2ImgWidth: 80%;
+  --playSectionCardTitleFontSize: 3.25rem;
+  --playSectionCardTitleWidth: 90%;
+  --playSectionCardDescriptionFontSize: 1.75rem;
   margin-bottom: 20rem;
 
   &__headContent {
@@ -23,10 +28,15 @@
       color: #f36722;
       gap: 1.5rem;
       cursor: pointer;
+
+      &:hover {
+        color: rgba(243, 103, 34, 0.7);
+      }
     }
   }
 
   &__cardPlace {
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -37,18 +47,17 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
       justify-content: space-between;
       background-color: #fff;
       border-radius: 2.5rem;
       z-index: 100;
       overflow: hidden;
       transition: all 0.3s ease-out;
-      padding-bottom: 2.5rem;
+      // padding-bottom: 2.5rem;
 
       &:nth-child(2) &__img {
         position: relative;
-        width: 80%;
+        width: var(--playSectionCard2ImgWidth);
         right: -30%;
         top: -4%;
         border-radius: 0rem;
@@ -56,36 +65,48 @@
 
       &__img {
         padding: 0;
-        width: 100%;
+        width: var(--playSectionCardImgWidth);
         max-height: 100%;
         object-fit: contain;
         border-radius: 2.5rem 2.5rem 400rem 400rem;
       }
 
-      &__title {
-        margin: 0 2.5rem;
-        margin-top: 7.75rem;
-        text-transform: uppercase;
-        font-size: 3.25rem;
-        font-family: "DrukWideCyr-Bold";
-        transition: all 0.3s ease-out;
-      }
+      &__textContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding-bottom: 2rem;
 
-      &__description {
-        margin: 0 2.5rem;
-        font-size: 1.75rem;
-        font-family: "Commissioner-Regular";
-        font-weight: 500;
-        transition: all 0.3s ease-out;
+        &__title {
+          margin: 0 2.5rem;
+          // margin-top: 1rem;
+          width: var(--playSectionCardTitleWidth);
+          text-transform: uppercase;
+          font-size: var(--playSectionCardTitleFontSize);
+          font-family: "DrukWideCyr-Bold";
+          transition: all 0.3s ease-out;
+        }
+
+        &__description {
+          margin: 0 2.5rem;
+          font-size: var(--playSectionCardDescriptionFontSize);
+          font-family: "Commissioner-Regular";
+          font-weight: 500;
+          transition: all 0.3s ease-out;
+        }
       }
 
       &__button {
         position: relative;
-        width: 100%;
+        width: 90%;
         display: none;
         align-items: center;
         justify-content: space-between;
         background-color: #f36722;
+        padding: 10px;
+        margin: 2rem auto;
+        border-radius: 2.5rem;
         font-size: 1.5rem;
         text-transform: uppercase;
         font-family: "DrukWideCyr-Bold";
@@ -96,8 +117,8 @@
         transition: all 0.3s ease-out;
       }
 
-      &:hover &__title,
-      &:hover &__description {
+      &:hover &__textContent__title,
+      &:hover &__textContent__description {
         color: #fff;
         transition: all 0.3s ease-out;
       }
@@ -107,6 +128,140 @@
         font-weight: 100;
         color: #fff;
       }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .playSection {
+    &__cardPlace {
+      --playSectionCardImgWidth: 80rem;
+      --playSectionCard2ImgWidth: 40%;
+      --playSectionCardDescriptionFontSize: 2rem;
+      --playSectionCardTitleWidth: 60%;
+      flex-direction: column;
+
+      &__card {
+        &__img {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .playSection {
+    &__cardPlace {
+      --playSectionCardImgWidth: 80rem;
+      --playSectionCard2ImgWidth: 50%;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .playSection {
+    &__cardPlace {
+      --playSectionCardImgWidth: 80rem;
+      --playSectionCard2ImgWidth: 60%;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .playSection {
+    &__cardPlace {
+      --playSectionCardImgWidth: 100%;
+      --playSectionCard2ImgWidth: 70%;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .playSection {
+    &__headContent {
+      &__title {
+        font-size: 5rem;
+      }
+
+      &__button {
+        span {
+          font-size: 2.5rem;
+        }
+        svg {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .playSection {
+    &__cardPlace {
+      --playSectionCardTitleWidth: 70%;
+
+      &__card {
+        &__textContent {
+          &__title {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .playSection {
+    &__headContent {
+      &__title {
+        font-size: 4rem;
+      }
+
+      &__button {
+        span {
+          font-size: 2rem;
+        }
+        svg {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .playSection {
+    &__cardPlace {
+      --playSectionCardTitleWidth: 80%;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .playSection {
+    &__headContent {
+      &__title {
+        font-size: 3.5rem;
+      }
+
+      &__button {
+        span {
+          font-size: 2rem;
+        }
+        svg {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 330px) {
+  .playSection {
+    &__cardPlace {
+      --playSectionCardTitleWidth: 90%;
     }
   }
 }

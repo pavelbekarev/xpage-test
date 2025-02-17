@@ -1,21 +1,21 @@
-<script>
+<script setup lang="ts">
 import "./style.scss";
 </script>
 <template>
   <div class="headerMenu">
     <div class="headerMenu__navigationContent">
-      <a href="/">
+      <a class="headerMenu__navigationContent__logo" href="/">
         <img src="../../assets/img/xpageLogo.svg" alt="Логотип XPage" />
       </a>
       <div class="headerMenu__navigationContent__links">
         <a class="headerMenu__navigationContent__links__link" href="">Играть</a>
-        <a class="headerMenu__navigationContent__links__link" href=""
+        <a class="headerMenu__navigationContent__links__link" href="/"
           >Смотреть</a
         >
-        <a class="headerMenu__navigationContent__links__link" href=""
+        <a class="headerMenu__navigationContent__links__link" href="/"
           >Учиться</a
         >
-        <a class="headerMenu__navigationContent__links__link" href=""
+        <a class="headerMenu__navigationContent__links__link" href="/"
           >Мероприятия</a
         >
       </div>
@@ -32,7 +32,7 @@ import "./style.scss";
         <img
           class="headerMenu__menuContent__profile__userAvatar"
           src="../../assets/img/profileAvatar.svg"
-          alt=""
+          alt="Profile avatar"
         />
       </div>
     </div>
